@@ -8,6 +8,6 @@ async def create_upload_file(file: UploadFile = File(...)):
     df = pandas.read_csv(file.file)
     data_list = df.to_dict(orient='records')
 
-    result = {"user_id": "", "data": data_list}
+    result = {"data": data_list}
 
     return  result
